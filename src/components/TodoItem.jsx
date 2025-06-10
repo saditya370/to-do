@@ -41,7 +41,7 @@ function TodoItem({ todo, onUpdate, onDelete, onToggleComplete }) {
             style={{ marginRight: "0.5rem", flexGrow: 1 }}
           />
           <button onClick={saveEdit}>Save</button>
-          <button onClick={() => setIsEditing(false)}>Cancel</button>
+          <button onClick={() => {setEditText(todo.text);setIsEditing(false);}}>Cancel</button>
         </>
       ) : (
         <>
